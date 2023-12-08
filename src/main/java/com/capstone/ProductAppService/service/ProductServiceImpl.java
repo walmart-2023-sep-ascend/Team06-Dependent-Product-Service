@@ -36,9 +36,7 @@ public class ProductServiceImpl {
 		pid=product.getProductId();
 		quantity=product.getAvailableQty();
 		int result=prepo.updateQuantity(pid, quantity);
-		System.out.println("Product updated count: "+result);
 		Products p=getProductbyId(pid);
-		System.out.println("After Product updated: "+p);
 		return p;
 	}
 }
